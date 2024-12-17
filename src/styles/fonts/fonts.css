@@ -1,0 +1,31 @@
+/* Satoshi Display Bold */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+/* Satoshi Display Light */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+/* Satoshi Display Medium */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+/* Satoshi Display Regular */
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/fonts/Satoshi-Regular.otf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
