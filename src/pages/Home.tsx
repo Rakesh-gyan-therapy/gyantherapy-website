@@ -95,9 +95,9 @@ export const HomeImageSecton = () => {
           <GyanTherapyTitle />
         </div>
       </div>
-      <div className="shadow-postcard bg-white z-10 w-full h-full md:h-[200px] p-2 relative">
-        <div className="flex flex-col md:flex-row h-full">
-          <div className="flex justify-between w-full md:w-3/5 bg-primary-orange py-2">
+      <div className="shadow-postcard bg-white z-10 w-full h-full md:h-[200px] p-2 relative rounded-xl">
+        <div className="flex flex-col md:flex-row h-full ">
+          <div className="flex justify-between w-full md:w-3/5 bg-primary-orange py-2 rounded-t-xl md:rounded-tr-none md:rounded-l-xl ">
             <div className="flex flex-col w-1/3 px-2  items-center justify-center text-white relative overflow-hidden">
               <div className="flex flex-col items-center z-20">
                 <h1 className="text-lg md:text-3xl font-bold ">45L+</h1>
@@ -138,7 +138,7 @@ export const HomeImageSecton = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center w-full md:w-2/5 bg-gradient-to-r from-gray-300 to-white p-3 md:p-0">
+          <div className="flex flex-col justify-center items-center w-full rounded-b-xl md:rounded-tl-none md:rounded-r-xl md:w-2/5 bg-gradient-to-r from-gray-300 to-white p-3 md:p-0">
             <div className="flex justify-center flex-col gap-2">
               <div className="w-full flex justify-start items-center gap-2">
                 <span className="font-bold text-base md:text-lg text-text-heading">
