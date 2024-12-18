@@ -138,7 +138,7 @@ export const HomeImageSecton = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center w-full rounded-b-xl md:rounded-tl-none md:rounded-r-xl md:w-2/5 bg-gradient-to-r from-gray-300 to-white p-3 md:p-0">
+          <div className="flex flex-col justify-center items-center w-full rounded-b-xl md:rounded-bl-none md:rounded-r-xl md:w-2/5 bg-gradient-to-r from-gray-300 to-white p-3 md:p-0">
             <div className="flex justify-center flex-col gap-2">
               <div className="w-full flex justify-start items-center gap-2">
                 <span className="font-bold text-base md:text-lg text-text-heading">
