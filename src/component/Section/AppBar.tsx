@@ -87,7 +87,7 @@ const AppBar = () => {
           pointerEvents: showMenu ? 'auto' : 'none'
         }}
       >
-        <div className="flex justify-end p-4">
+        <div className="flex justify-end p-8">
           <button 
             onClick={() => setShowMenu(false)}
             className="transition-transform duration-200 hover:scale-110"
@@ -133,25 +133,25 @@ const AppBar = () => {
             <img
               src={YoutubeIcon}
               onClick={() => openLink("YouTube")}
-              className="cursor-pointer w-6 transition-transform duration-200 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
               alt="youtube icon"
             />
             <img
               src={InstaIcon}
               onClick={() => openLink("Instagram")}
-              className="cursor-pointer w-6 transition-transform duration-200 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
               alt="insta icon"
             />
             <img
               src={XIcon}
               onClick={() => openLink("X")}
-              className="cursor-pointer w-6 transition-transform duration-200 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
               alt="twitter icon"
             />
             <img
               src={TelegramIcon}
               onClick={() => openLink("Telegram")}
-              className="cursor-pointer w-6 transition-transform duration-200 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
               alt="telegram icon"
             />
           </div>
