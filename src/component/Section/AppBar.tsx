@@ -32,7 +32,7 @@ const AppBar = () => {
 
   return (
     <>
-      <div className="hidden md:flex top-0 justify-between items-center w-full h-[90px] px-[20px] lg:px-[90px] fixed bg-white z-40">
+      <div className="hidden md:flex top-0 justify-between items-center w-full h-[90px] px-[20px] lg:px-[90px] fixed bg-white z-40 shadow-sm">
         <div>
           <Link to="/home">
             <img src={GyanTherapyLogo} alt="Gyan therapy logo" />

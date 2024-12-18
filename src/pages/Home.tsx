@@ -75,7 +75,7 @@ export const HomeImageSecton = () => {
     <>
       <div className="-mb-28 mt-16">
         <img
-          className=" m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative"
+          className=" m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
           src={GTLandingImage}
           alt="Gyan Therapy"
         />
