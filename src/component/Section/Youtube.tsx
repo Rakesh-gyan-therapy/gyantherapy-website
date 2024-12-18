@@ -8,7 +8,7 @@ const Youtube = () => {
   const videos = processVideos(HomePageYoutubeVideo);
   return (
     <div className="youtube-section flex flex-col justify-center gap-10">
-      <SocialTitle tag="Videos" title="Latest YouTube Videos" />
+      <SocialTitle title="Latest YouTube Videos" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12 ">
         {videos.map((video: ProcessedVideo) => (
           <PostCard

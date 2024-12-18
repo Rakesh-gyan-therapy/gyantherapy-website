@@ -8,7 +8,7 @@ const Instagram = () => {
   const posts = processPost(HomePageInstagramFeed);
   return (
     <div className="youtube-section flex flex-col justify-center gap-10">
-      <SocialTitle tag="Feed" title="Latest Instagram Feed" />
+      <SocialTitle title="Latest Instagram Feed" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12 z-10 ">
         {posts.map((post: ProcessedPost) => (
           <PostCard

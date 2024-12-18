@@ -8,7 +8,7 @@ const Twitter = () => {
   const posts = processPost(HomePageXFeed);
   return (
     <div className="flex flex-col justify-center gap-10">
-      <SocialTitle tag="Feed" title="Latest X Feed" />
+      <SocialTitle title="Latest X Feed" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12 z-10 ">
         {posts.map((post: ProcessedPost) => (
           <PostCard
