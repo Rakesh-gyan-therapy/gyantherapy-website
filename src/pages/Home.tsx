@@ -82,16 +82,16 @@ export const HomeImageSecton = () => {
         <div className="hidden md:block absolute top-96 right-12">
           <img src={Smiley} alt="smiley face" />
         </div>
-        <div className="hidden md:block absolute md:left-[350px] top-24 lg:left-[700px]">
+        <div className="hidden md:block absolute md:left-[350px] top-24 lg:left-[450px] xl:left-[700px]">
           <img src={Crown} alt="crown" />
         </div>
         <div className="scale-x-[-1] absolute md:hidden top-24">
           <img src={Crown} alt="crown" />
         </div>
-        <div className="md:block absolute top-24 right-2 md:top-40 md:right-10 lg:top-40 lg:right-64">
+        <div className="md:block absolute top-24 right-2 md:top-40 md:right-10 lg:top-40 lg:right-10 xl:right-64">
           <HomeTitile />
         </div>
-        <div className="hidden lg:block absolute lg:top-48 lg:left-24">
+        <div className="hidden xl:block absolute xl:top-48 xl:left-24">
           <GyanTherapyTitle />
         </div>
       </div>
@@ -199,7 +199,7 @@ export const HomeImageSecton = () => {
           <img src={ThreeLines} alt="Three-line" />
         </div>
       </div>
-      <div className="lg:hidden mt-10">
+      <div className="xl:hidden mt-10">
         <GyanTherapyTitle />
       </div>
     </>
@@ -225,7 +225,7 @@ const HomeTitile = () => {
 
 const GyanTherapyTitle = () => {
   return (
-    <div className="flex flex-col justify-start gap-2 w-full lg:w-96">
+    <div className="flex flex-col justify-start gap-2 w-full xl:w-96">
       <h1 className="text-3xl font-bold text-text-heading">Gyan Therapy</h1>
       <p className="text-text-heading">
         Our mission is to help you make confident, informed choices on the
