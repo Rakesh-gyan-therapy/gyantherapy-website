@@ -8,11 +8,11 @@ const YoutubeVideoCard = (props: ProcessedVideo) => {
     <>
       {/* Desktop Layout */}
       <div className="youtube-video-card hidden md:flex shadow-postcard gap-5 justify-between items-center rounded-xl bg-white p-5 w-full">
-        <div className="w-1/2 h-auto">
+        <div className="w-1/2 h-auto overflow-hidden rounded-xl">
           <img
             src={props.imageUrl.high}
             alt="thumbnail"
-            className="rounded-xl w-full h-auto max-h-[350px] object-cover"
+            className="w-full h-auto max-h-[350px] object-cover scale-150 xl:scale-100 "
           />
         </div>
         <div className="flex flex-col justify-between gap-4 w-1/2">
