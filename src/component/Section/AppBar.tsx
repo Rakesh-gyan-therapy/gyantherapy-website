@@ -130,41 +130,41 @@ const AppBar = () => {
             ))}
           </div>
           <div 
-            className="flex gap-4 mt-auto mb-8 transition-all duration-300"
+            className="flex gap-4 mt-auto mb-8 transition-all duration-300 transform"
             style={{
               transform: `translateY(${showMenu ? '0' : '20px'})`,
               opacity: showMenu ? 1 : 0,
-              transitionDelay: `${links.length * 100}ms`
+              transitionDelay: `${links.length+2 * 100}ms`
             }}
           >
             <img
               src={YoutubeIcon}
               onClick={() => openLink("YouTube")}
-              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300"
               alt="youtube icon"
             />
             <img
               src={InstaIcon}
               onClick={() => openLink("Instagram")}
-              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300"
               alt="insta icon"
             />
             <img
               src={XIcon}
               onClick={() => openLink("X")}
-              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300"
               alt="twitter icon"
             />
             <img
               src={TelegramIcon}
               onClick={() => openLink("Telegram")}
-              className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
+              className="cursor-pointer w-6 transition-transform duration-300"
               alt="telegram icon"
             />
             <img
               src={WhatsaAppIcon}
               onClick={() => openLink("WhatsApp")}
-              className="cursor-pointer w-5 transition-transform duration-300 hover:scale-110"
+              className="cursor-pointer w-5 transition-transform duration-300"
               alt="telegram icon"
             />
           </div>
