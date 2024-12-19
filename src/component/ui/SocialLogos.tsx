@@ -7,6 +7,8 @@ import YtHoverLogo from "../../assets/logo/yt-original.svg";
 import XHoverLogo from "../../assets/logo/x-original.svg";
 import InstaHoverLogo from "../../assets/logo/insta-original.svg";
 import TeleHoverLogo from "../../assets/logo/tele-original.svg";
+import WpRedLogo from "../../assets/logo/whatsapp-red.svg";
+import WpHoverLogo from "../../assets/logo/whatsapp-filed.svg";
 import { socialLinks } from "../../config/socialLink";
 
 type LogoItem = {
@@ -54,6 +56,14 @@ const SocialLogos: React.FC = () => {
       link: socialLinks.Telegram,
       hovertext: "Join",
     },
+    {
+      id: "wb",
+      defaultLogo: WpRedLogo,
+      hoverLogo: WpHoverLogo,
+      alt: "WhatsApp",
+      link: socialLinks.WhatsApp,
+      hovertext: "Join",
+    }
   ];
 
   return (

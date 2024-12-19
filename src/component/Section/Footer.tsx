@@ -5,14 +5,25 @@ import YoutubeIcon from "../../assets/logo/yt.svg";
 import XIcon from "../../assets/logo/x.svg";
 import TelegramIcon from "../../assets/logo/tele.svg";
 import InstaIcon from "../../assets/logo/insta.svg";
+import WhatsAppIcon from "../../assets/logo/whatsapp-black.svg";
 import { socialLinks, SocialLinks } from "../../config/socialLink";
+interface SocialIconConfig {
+  platform: keyof SocialLinks;
+  icon: string;
+  className?: string;
+}
+
+const socialIcons: SocialIconConfig[] = [
+  { platform: "YouTube", icon: YoutubeIcon },
+  { platform: "Instagram", icon: InstaIcon },
+  { platform: "X", icon: XIcon },
+  { platform: "Telegram", icon: TelegramIcon },
+  { platform: "WhatsApp", icon: WhatsAppIcon, className: "w-5 lg:w-6" }
+];
 
 const ScrollToTopLink = ({ children, to, className }: LinkProps) => {
   const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -22,68 +33,67 @@ const ScrollToTopLink = ({ children, to, className }: LinkProps) => {
   );
 };
 
-const Footer = () => {
+const Logo = ({ className }: { className: string }) => {
+  const navigate = useNavigate();
+  
+  const handleHomeNavigation = () => {
+    navigate('/home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <img 
+      src={GyanTherapyLogo} 
+      alt="Gyan Therapy Logo" 
+      className={className}
+      onClick={handleHomeNavigation}
+    />
+  );
+};
+
+const SocialIcons = ({ className = "" }: { className?: string }) => {
   const openLink = (platform: keyof SocialLinks): void => {
     window.open(socialLinks[platform], "_blank");
   };
 
-  const navigate = useNavigate();
+  return (
+    <div className={`flex gap-4 lg:gap-6 ${className}`}>
+      {socialIcons.map(({ platform, icon, className: iconClass }) => (
+        <img
+          key={platform}
+          src={icon}
+          onClick={() => openLink(platform)}
+          className={`cursor-pointer w-6 md:w-7 lg:w-8 ${iconClass || ''}`}
+          alt={`${platform} icon`}
+        />
+      ))}
+    </div>
+  );
+};
 
-  const handleHomeNavigation = () => {
-    navigate('/home');
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+const NavigationLinks = ({ className = "" }: { className?: string }) => (
+  <div className={className}>
+    {links.map((link) => (
+      <ScrollToTopLink
+        key={link.to}
+        to={link.to}
+        className="text-text-heading font-medium text-base md:text-lg"
+      >
+        {link.label}
+      </ScrollToTopLink>
+    ))}
+  </div>
+);
 
+const Footer = () => {
   return (
     <div>
+      {/* Mobile Footer */}
       <div className="bottom-0 flex flex-col justify-center w-full bg-primary-grey px-4 py-8 mt-10 md:hidden">
         <div className="flex flex-col items-center gap-8">
-          <img 
-            src={GyanTherapyLogo} 
-            alt="Gyan Therapy Logo" 
-            className="w-24"
-            onClick={handleHomeNavigation}
-          />
-          <div className="flex flex-col gap-4 items-center">
-            {links.map((link) => (
-              <ScrollToTopLink
-                key={link.to}
-                to={link.to}
-                className="text-text-heading font-medium text-base"
-              >
-                {link.label}
-              </ScrollToTopLink>
-            ))}
-          </div>
-          <div className="flex gap-4">
-            <img
-              src={YoutubeIcon}
-              onClick={() => openLink("YouTube")}
-              className="cursor-pointer w-6"
-              alt="youtube icon"
-            />
-            <img
-              src={InstaIcon}
-              onClick={() => openLink("Instagram")}
-              className="cursor-pointer w-6"
-              alt="insta icon"
-            />
-            <img
-              src={XIcon}
-              onClick={() => openLink("X")}
-              className="cursor-pointer w-6"
-              alt="twitter icon"
-            />
-            <img
-              src={TelegramIcon}
-              onClick={() => openLink("Telegram")}
-              className="cursor-pointer w-6"
-              alt="telegram icon"
-            />
-          </div>
+          <Logo className="w-24" />
+          <NavigationLinks className="flex flex-col gap-4 items-center" />
+          <SocialIcons />
           <hr className="w-full mt-4 border-[1px] border-gray-300" />
           <div className="flex flex-col items-center text-text-heading">
             <span className="text-sm text-center">&#169; All rights reserved</span>
@@ -91,55 +101,16 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Desktop Footer */}
       <div className="bottom-0 flex-col justify-center w-full bg-primary-grey py-8 mt-24 hidden md:flex px-[90px]">
         <div className="flex justify-between items-center">
-          <div className="flex gap-6 lg:gap-12">
-            {links.map((link) => (
-              <ScrollToTopLink
-                key={link.to}
-                to={link.to}
-                className="text-text-heading font-medium text-lg"
-              >
-                {link.label}
-              </ScrollToTopLink>
-            ))}
-          </div>
-          <div className="flex gap-5 lg:gap-6">
-            <img
-              src={YoutubeIcon}
-              onClick={() => openLink("YouTube")}
-              className="cursor-pointer w-7 lg:w-8"
-              alt="youtube icon"
-            />
-            <img
-              src={InstaIcon}
-              onClick={() => openLink("Instagram")}
-              className="cursor-pointer w-7 lg:w-8"
-              alt="insta icon"
-            />
-            <img
-              src={XIcon}
-              onClick={() => openLink("X")}
-              className="cursor-pointer w-7 lg:w-8"
-              alt="twitter icon"
-            />
-            <img
-              src={TelegramIcon}
-              onClick={() => openLink("Telegram")}
-              className="cursor-pointer w-7 lg:w-8"
-              alt="telegram icon"
-            />
-          </div>
+          <NavigationLinks className="flex gap-6 lg:gap-12" />
+          <SocialIcons />
         </div>
         <hr className="w-full mt-8 mb-4 border-[1px] border-gray-300" />
         <div className="flex justify-between items-center text-text-heading">
           <span className="text-base">&#169; All rights reserved</span>
-          <img 
-            src={GyanTherapyLogo} 
-            alt="Gyan Therapy Logo" 
-            className="w-32"
-            onClick={handleHomeNavigation}
-          />
+          <Logo className="w-32" />
           <div className="flex gap-6 lg:gap-12 text-base">
             <span className="cursor-pointer">Jai Hind Doston</span>
           </div>
