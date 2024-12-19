@@ -23,7 +23,10 @@ const socialIcons: SocialIconConfig[] = [
 
 const ScrollToTopLink = ({ children, to, className }: LinkProps) => {
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   return (
@@ -38,7 +41,10 @@ const Logo = ({ className }: { className: string }) => {
   
   const handleHomeNavigation = () => {
     navigate('/home');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   return (

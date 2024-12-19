@@ -22,7 +22,10 @@ const Photos = ({ photosData }: PhotosComponentProps) => {
 
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   const startIndex = (page - 1) * photosPerPage;

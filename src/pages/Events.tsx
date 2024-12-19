@@ -16,7 +16,10 @@ const Events = () => {
 
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.documentElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
   };
 
   const startIndex = (page - 1) * videosPerPage;

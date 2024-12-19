@@ -119,9 +119,9 @@ const AppBar = () => {
                 }}
                 onClick={() => {
                   setShowMenu(false);
-                  window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
+                  document.documentElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
                   });
                 }}
               >
