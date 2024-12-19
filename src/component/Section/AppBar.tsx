@@ -57,7 +57,7 @@ const AppBar = () => {
       
       {/* Mobile Menu Trigger */}
       {!showMenu && (
-        <div className="flex top-0 justify-between items-center w-full h-[90px] px-[20px] fixed backdrop-blur-2xl z-40 md:hidden">
+        <div className="flex top-0 justify-between items-center w-full h-[90px] px-[20px] fixed bg-white z-40 md:hidden">
           <div>
             <Link to="/home">
               <img src={GyanTherapyLogo} alt="Gyan therapy logo" />
