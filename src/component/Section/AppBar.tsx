@@ -116,7 +116,13 @@ const AppBar = () => {
                   opacity: showMenu ? 1 : 0,
                   transitionDelay: `${index * 100}ms`
                 }}
-                onClick={() => setShowMenu(false)}
+                onClick={() => {
+                  setShowMenu(false);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                  });
+                }}
               >
                 {link.label}
               </Link>

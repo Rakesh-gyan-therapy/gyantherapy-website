@@ -26,7 +26,7 @@ const routes: RouteObject[] = [
         element: <Events />,
       },
       {
-        path: "/our-works",
+        path: "/our-work",
         element: <OurWork />,
       },
       {
@@ -48,7 +48,7 @@ const routes: RouteObject[] = [
 export const links = [
   { to: "/home", label: "Home" },
   { to: "/events", label: "Events" },
-  { to: "/our-works", label: "Our Works" },
+  { to: "/our-work", label: "Our Work" },
   { to: "/gallery", label: "Gallery" },
   { to: "/our-team", label: "Our Team" },
   { to: "/about-us", label: "About Us" },
