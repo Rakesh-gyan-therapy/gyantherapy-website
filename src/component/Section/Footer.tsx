@@ -7,6 +7,7 @@ import TelegramIcon from "../../assets/logo/tele.svg";
 import InstaIcon from "../../assets/logo/insta.svg";
 import WhatsAppIcon from "../../assets/logo/whatsapp-black.svg";
 import { socialLinks, SocialLinks } from "../../config/socialLink";
+import { animateScroll as scroll } from 'react-scroll';
 interface SocialIconConfig {
   platform: keyof SocialLinks;
   icon: string;
@@ -18,15 +19,15 @@ const socialIcons: SocialIconConfig[] = [
   { platform: "Instagram", icon: InstaIcon },
   { platform: "X", icon: XIcon },
   { platform: "Telegram", icon: TelegramIcon },
-  { platform: "WhatsApp", icon: WhatsAppIcon, className: "w-5 lg:w-6" }
+  { platform: "WhatsApp", icon: WhatsAppIcon, className: "w-5" }
 ];
 
 const ScrollToTopLink = ({ children, to, className }: LinkProps) => {
   const handleClick = () => {
-    document.documentElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    scroll.scrollToTop({
+                        duration: 500,  
+                        smooth: true,   
+                    });
   };
 
   return (
@@ -41,10 +42,10 @@ const Logo = ({ className }: { className: string }) => {
   
   const handleHomeNavigation = () => {
     navigate('/home');
-    document.documentElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    scroll.scrollToTop({
+      duration: 500,  
+      smooth: true,   
+  });
   };
 
   return (
@@ -69,7 +70,7 @@ const SocialIcons = ({ className = "" }: { className?: string }) => {
           key={platform}
           src={icon}
           onClick={() => openLink(platform)}
-          className={`cursor-pointer w-6 md:w-7 lg:w-8 ${iconClass || ''}`}
+          className={`cursor-pointe ${platform=='WhatsApp'?'w-5 md:w-6': 'w-6 md:w-7 lg:w-8'}`}
           alt={`${platform} icon`}
         />
       ))}
