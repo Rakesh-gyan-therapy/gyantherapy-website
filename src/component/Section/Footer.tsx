@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, LinkProps } from "react-router-dom";
 import { links } from "../../routes/routes";
 import GyanTherapyLogo from "../../assets/logo/gyantherapylogo.svg";
 import YoutubeIcon from "../../assets/logo/yt.svg";
@@ -7,9 +7,34 @@ import TelegramIcon from "../../assets/logo/tele.svg";
 import InstaIcon from "../../assets/logo/insta.svg";
 import { socialLinks, SocialLinks } from "../../config/socialLink";
 
+const ScrollToTopLink = ({ children, to, className }: LinkProps) => {
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <Link to={to} className={className} onClick={handleClick}>
+      {children}
+    </Link>
+  );
+};
+
 const Footer = () => {
   const openLink = (platform: keyof SocialLinks): void => {
     window.open(socialLinks[platform], "_blank");
+  };
+
+  const navigate = useNavigate();
+
+  const handleHomeNavigation = () => {
+    navigate('/home');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -20,16 +45,17 @@ const Footer = () => {
             src={GyanTherapyLogo} 
             alt="Gyan Therapy Logo" 
             className="w-24"
+            onClick={handleHomeNavigation}
           />
           <div className="flex flex-col gap-4 items-center">
             {links.map((link) => (
-              <Link
+              <ScrollToTopLink
                 key={link.to}
                 to={link.to}
                 className="text-text-heading font-medium text-base"
               >
                 {link.label}
-              </Link>
+              </ScrollToTopLink>
             ))}
           </div>
           <div className="flex gap-4">
@@ -69,13 +95,13 @@ const Footer = () => {
         <div className="flex justify-between items-center">
           <div className="flex gap-6 lg:gap-12">
             {links.map((link) => (
-              <Link
+              <ScrollToTopLink
                 key={link.to}
                 to={link.to}
                 className="text-text-heading font-medium text-lg"
               >
                 {link.label}
-              </Link>
+              </ScrollToTopLink>
             ))}
           </div>
           <div className="flex gap-5 lg:gap-6">
@@ -111,11 +137,11 @@ const Footer = () => {
           <img 
             src={GyanTherapyLogo} 
             alt="Gyan Therapy Logo" 
-            className="w-32 "
+            className="w-32"
+            onClick={handleHomeNavigation}
           />
           <div className="flex gap-6 lg:gap-12 text-base">
             <span className="cursor-pointer">Jai Hind Doston</span>
-            
           </div>
         </div>
       </div>
