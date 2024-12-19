@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import YoutubeIcon from "../../assets/logo/yt.svg";
 import XIcon from "../../assets/logo/x.svg";
 import TelegramIcon from "../../assets/logo/tele.svg";
+import WhatsaAppIcon from "../../assets/logo/whatsapp-black.svg";
 import InstaIcon from "../../assets/logo/insta.svg";
 import { socialLinks, SocialLinks } from "../../config/socialLink";
 import Menu from "../../assets/logo/menu.svg";
@@ -158,6 +159,12 @@ const AppBar = () => {
               src={TelegramIcon}
               onClick={() => openLink("Telegram")}
               className="cursor-pointer w-6 transition-transform duration-300 hover:scale-110"
+              alt="telegram icon"
+            />
+            <img
+              src={WhatsaAppIcon}
+              onClick={() => openLink("WhatsApp")}
+              className="cursor-pointer w-5 transition-transform duration-300 hover:scale-110"
               alt="telegram icon"
             />
           </div>
