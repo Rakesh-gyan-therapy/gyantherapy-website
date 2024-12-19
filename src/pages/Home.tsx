@@ -94,7 +94,7 @@ export const HomeImageSecton = () => {
         <div className="scale-x-[-1] absolute md:hidden top-28">
           <img src={Crown} alt="crown" />
         </div>
-        <div className="md:block absolute top-24 right-1 md:top-40 md:right-10 lg:top-40 lg:right-10 xl:right-72">
+        <div className="md:block absolute top-24 right-1 md:top-40 md:right-10 lg:top-52 lg:right-4 xl:top-52 xl:right-60">
           <HomeTitile />
         </div>
         <div className="hidden top-48 left-6 lg:block absolute xl:top-48 xl:left-24">
@@ -213,9 +213,9 @@ export const HomeImageSecton = () => {
 };
 const HomeTitile = () => {
   return (
-    <div className="flex items-center gap-10">
+    <div className="flex items-center gap-6">
       <img className="hidden md:block" src={TitleArrow} alt="" />
-      <div className="flex flex-col justify-end w-36 md:w-44 lg:w-64 gap-2">
+      <div className="flex flex-col justify-end w-36 md:w-44 lg:w-80 gap-2">
         <h1 className="leading-none font-extrabold text-xl md:text-3xl text-text-heading">
           One of Most <span className="text-primary-orange">Loved Tech</span>{" "}
           creator by <span className="text-primary-orange">Viewers</span>
