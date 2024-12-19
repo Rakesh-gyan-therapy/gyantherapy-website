@@ -91,7 +91,7 @@ const Footer = () => {
       {/* Mobile Footer */}
       <div className="bottom-0 flex flex-col justify-center w-full bg-primary-grey px-4 py-8 mt-10 md:hidden">
         <div className="flex flex-col items-center gap-8">
-          <Logo className="w-24" />
+          <Logo className="w-24 cursor-pointer" />
           <NavigationLinks className="flex flex-col gap-4 items-center" />
           <SocialIcons />
           <hr className="w-full mt-4 border-[1px] border-gray-300" />
@@ -110,7 +110,7 @@ const Footer = () => {
         <hr className="w-full mt-8 mb-4 border-[1px] border-gray-300" />
         <div className="flex justify-between items-center text-text-heading">
           <span className="text-base">&#169; All rights reserved</span>
-          <Logo className="w-32" />
+          <Logo className="w-32 cursor-pointer" />
           <div className="flex gap-6 lg:gap-12 text-base">
             <span className="cursor-pointer">Jai Hind Doston</span>
           </div>
