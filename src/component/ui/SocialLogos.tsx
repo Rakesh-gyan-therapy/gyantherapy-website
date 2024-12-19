@@ -74,7 +74,7 @@ const SocialLogos: React.FC = () => {
           className="relative flex flex-col items-center group"
         >
           <div
-            className="w-12 h-12 cursor-pointer relative"
+            className="h-9 w-9 xl:w-12 xl:h-12 cursor-pointer relative"
             onMouseEnter={() => setHoveredLogo(logo.id)}
             onMouseLeave={() => setHoveredLogo(null)}
             onClick={() => logo.link && window.open(logo.link, "_blank")}
