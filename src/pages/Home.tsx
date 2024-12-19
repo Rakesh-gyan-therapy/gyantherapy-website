@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center px-[20px] lg:px-[90px] overflow-hidden">
       <HomeImageSecton />
-      <div className="mt-24 w-full flex flex-col gap-20 justify-center">
+      <div className="mt-20 sm:mt-24 w-full flex flex-col gap-20 justify-center">
         <div className="relative">
           <Youtube />
           <img
@@ -231,7 +231,7 @@ const HomeTitile = () => {
 
 const GyanTherapyTitle = () => {
   return (
-    <div className="flex flex-col justify-start gap-2 w-full lg:w-64 xl:w-96">
+    <div className="flex flex-col items-center sm:items-start justify-start gap-2 w-full lg:w-64 xl:w-96">
       <h1 className="text-3xl font-bold text-text-heading">Gyan Therapy</h1>
       <p className="text-text-heading">
         Our mission is to help you make confident, informed choices on the
