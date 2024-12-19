@@ -1,4 +1,5 @@
 import GTLandingImage from "../assets/images/gt-landing.webp";
+import GTLandingMobileImage from "../assets/images/gt-landing-mobile.webp";
 import Smiley from "../assets/logo/face-xl.svg";
 import Scribble from "../assets/logo/scribble.svg";
 import ArrowStraight from "../assets/logo/arrow-straight.svg";
@@ -73,10 +74,15 @@ export default Home;
 export const HomeImageSecton = () => {
   return (
     <>
-      <div className="-mb-28 mt-16">
+      <div className="-mb-20 sm:-mb-28 mt-16">
         <img
-          className=" m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
+          className=" hidden sm:block m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
           src={GTLandingImage}
+          alt="Gyan Therapy"
+        />
+        <img
+          className="block sm:hidden m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
+          src={GTLandingMobileImage}
           alt="Gyan Therapy"
         />
         <div className="hidden md:block absolute top-96 right-12">
@@ -85,10 +91,10 @@ export const HomeImageSecton = () => {
         <div className="hidden md:block absolute md:left-[350px] top-24 lg:left-[450px] xl:left-[700px]">
           <img src={Crown} alt="crown" />
         </div>
-        <div className="scale-x-[-1] absolute md:hidden top-24">
+        <div className="scale-x-[-1] absolute md:hidden top-28">
           <img src={Crown} alt="crown" />
         </div>
-        <div className="md:block absolute top-24 right-2 md:top-40 md:right-10 lg:top-40 lg:right-10 xl:right-64">
+        <div className="md:block absolute top-24 right-1 md:top-40 md:right-10 lg:top-40 lg:right-10 xl:right-64">
           <HomeTitile />
         </div>
         <div className="hidden xl:block absolute xl:top-48 xl:left-24">
