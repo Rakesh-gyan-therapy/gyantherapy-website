@@ -209,13 +209,13 @@ const HomeTitile = () => {
   return (
     <div className="flex items-center gap-10">
       <img className="hidden md:block" src={TitleArrow} alt="" />
-      <div className="flex flex-col justify-end w-36 md:w-44 lg:w-72 gap-2">
+      <div className="flex flex-col justify-end w-36 md:w-44 lg:w-64 gap-2">
         <h1 className="leading-none font-extrabold text-xl md:text-3xl text-text-heading">
-          Top tech <span className="text-primary-orange">Indian creator</span>{" "}
-          in <span className="text-primary-orange">Forbes</span>
+          One of Most <span className="text-primary-orange">Loved Tech</span>{" "}
+          creator by <span className="text-primary-orange">Viewers</span>
         </h1>
         <p className="text-text-grey text-xs md:text-sm">
-          Bringing You the Best of Tech Reviews, Unboxings, and More!
+        -Thank you❤️
         </p>
         <img className="w-16 h-16 md:hidden" src={TitleArrow} alt="" />
       </div>
@@ -231,9 +231,6 @@ const GyanTherapyTitle = () => {
         Our mission is to help you make confident, informed choices on the
         latest gadgets, smartphones, and tech essentials in a straightforward,
         engaging style, making technology easy to understand for viewers.
-      </p>
-      <p className="font-semibold text-text-heading">
-        One of Most Loved Tech Creator by Viewers - Thank you❤️
       </p>
       <div className="hidden lg:block">
         <SocialLogos />
