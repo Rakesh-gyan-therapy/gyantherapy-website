@@ -16,10 +16,7 @@ const OurWork = () => {
 
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
-
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const startIndex = (page - 1) * videosPerPage;
