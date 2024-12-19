@@ -76,12 +76,12 @@ export const HomeImageSecton = () => {
     <>
       <div className="-mb-20 sm:-mb-28 mt-16">
         <img
-          className=" hidden sm:block m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
+          className=" hidden sm:block m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-xl"
           src={GTLandingImage}
           alt="Gyan Therapy"
         />
         <img
-          className="block sm:hidden m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-md"
+          className="block sm:hidden m-auto w-[320px] h-[380px] md:w-[550px] md:h-[550px] lg:w-[670px] lg:h-[670px] relative drop-shadow-xl"
           src={GTLandingMobileImage}
           alt="Gyan Therapy"
         />
